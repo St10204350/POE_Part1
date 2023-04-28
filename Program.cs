@@ -113,8 +113,32 @@ namespace Part1
 
                     }
                     count++;
+
+                    // Prompt the user to enter the number of steps
+                    Console.Write("Enter the number of steps: ");
+                    int numSteps = int.Parse(Console.ReadLine());
+
+                    // Initialize the steps array with the correct size
+                    steps = new string[numSteps];
+
+                    // Prompt the user to enter the details for each step
+                    for (int b = 0; b < numSteps; b++)
+                    {
+
+                        Console.Write($"Enter step #{b + 1}: ");
+                        steps[b] = Console.ReadLine();
+                    }
                 }
+
+
             }
+            else
+            {
+                Console.WriteLine("Incorrect input");
+            }
+
+        }
+    }
         }
     }
 }
