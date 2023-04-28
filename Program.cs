@@ -50,6 +50,17 @@ namespace Part1
 
                     Console.Write("Ingredient name: ");
                     ingredients[a] = Console.ReadLine();
+                    try
+                    {
+                        Console.Write("Ingredient quantity: ");
+                        quantities[a] = double.Parse(Console.ReadLine());
+
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Invalid input. Please try again");
+                        Console.Write("Ingredient quantity: ");
+                    }
                 }
             }
         }
