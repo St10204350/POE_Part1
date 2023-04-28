@@ -292,12 +292,21 @@ class Program
                     recipe.RecipeDetails();
                     break;
                 case "2":
+                    //display the DisplayResults method
+                    recipe.DisplayResults();
                     break;
                 case "3":
+                    //Prompt the to enter the factor to scale
+                    Console.WriteLine("Select the factor you want to be scaled : \n1. 0.5(half) \n2. 2(double) \n3. 3(triple)");
+                    recipe.ScaleRecipe();
                     break;
                 case "4":
+                    //display the ResetQuantities method
+                    recipe.ResetQuantities();
                     break;
                 case "5":
+                    //display the ClearRecipe method
+                    recipe.ClearRecipe();
                     break;
                 case "6":
                     //Stop the application
