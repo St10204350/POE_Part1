@@ -284,6 +284,31 @@ class Program
             Console.WriteLine("6. Exit");
 
             string option = Console.ReadLine();
+
+            switch (option)
+            {
+                case "1":
+                    //display the RecipeDetails method
+                    recipe.RecipeDetails();
+                    break;
+                case "2":
+                    break;
+                case "3":
+                    break;
+                case "4":
+                    break;
+                case "5":
+                    break;
+                case "6":
+                    //Stop the application
+                    Console.WriteLine("Thank you for using the application...");
+                    return;
+                default:
+                    //display the below message if the user inputted incorrect option
+                    Console.WriteLine("Invalid choice. Please enter a valid option.");
+                    break;
+            }
+
         }
-        }
+    }
 }
