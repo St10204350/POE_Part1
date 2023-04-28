@@ -162,6 +162,51 @@ namespace Part1
                 Console.WriteLine($"Step {b + 1}  {steps[b]}");
             }
         }
+
+        public void ScaleRecipe()
+        {
+            n = int.Parse(Console.ReadLine());
+            switch (n)
+            {
+                case 1:
+                    n = 0.5;
+                    for (int i = 0; i < quantities.Length; i++)
+                    {
+                        quantities[i] *= n;
+                    }
+                    break;
+                case 2:
+                    n = 2;
+                    for (int i = 0; i < quantities.Length; i++)
+                    {
+                        if (quantities[i] == 16 || units[i].Equals("tablespoon"))
+                        {
+                            quantities[i] = 1;
+                            units[i] = "cups";
+                        }
+                        else
+                        {
+                            quantities[i] *= n;
+                        }
+                    }
+                    break;
+                case 3:
+                    n = 3;
+                    for (int i = 0; i < quantities.Length; i++)
+                    {
+                        if (quantities[i] == 3 || units[i].Equals("teaspoon"))
+                        {
+                            quantities[i] = 1;
+                            units[i] = "tablespoon";
+                        }
+                        else
+                        {
+                            quantities[i] *= n;
+                        }
+                    }
+                    break;
+            }
+        }
     }
         
     
