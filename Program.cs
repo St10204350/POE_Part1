@@ -258,3 +258,18 @@ namespace Part1
     }
     
 }
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Application recipe = new Application();
+
+        // Set the Foreground color to Red
+        Console.ForegroundColor = ConsoleColor.Red;
+
+        //Set the background color to DarkBlue
+        Console.BackgroundColor = ConsoleColor.DarkBlue;
+        Console.Clear();
+    }
+}
