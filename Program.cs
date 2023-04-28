@@ -271,5 +271,19 @@ class Program
         //Set the background color to DarkBlue
         Console.BackgroundColor = ConsoleColor.DarkBlue;
         Console.Clear();
-    }
+
+        Console.WriteLine("*******Welcome to Destoyer's Application*******");
+
+        while (true)
+        {
+            Console.WriteLine("1. Recipe details");
+            Console.WriteLine("2. Display recipe");
+            Console.WriteLine("3. Scale recipe");
+            Console.WriteLine("4. Reset quantities");
+            Console.WriteLine("5. Clear recipe");
+            Console.WriteLine("6. Exit");
+
+            string option = Console.ReadLine();
+        }
+        }
 }
