@@ -207,7 +207,35 @@ namespace Part1
                     break;
             }
         }
+
+        public void ResetQuantities()
+        {
+            // Reset all the quantities to their original values
+            for (int i = 0; i < quantities.Length; i++)
+            {
+                if (quantities[i] == 1 && units[i].Equals("cups"))
+                {
+                    quantities[i] += 7;
+                    units[i] = "tablespoon";
+                }
+                else if (quantities[i] == 1 && units[i].Equals("tablespoon"))
+                {
+                    quantities[i] += 2;
+                    units[i] = "teaspoon";
+                }
+                else if (n == 1)
+                {
+                    quantities[i] /= 0.5;
+                }
+                else
+                {
+                    quantities[i] /= n;
+                }
+
+            }
+
+        }
+
     }
-        
     
 }
