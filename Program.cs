@@ -50,6 +50,7 @@ namespace Part1
 
                     Console.Write("Ingredient name: ");
                     ingredients[a] = Console.ReadLine();
+
                     try
                     {
                         Console.Write("Ingredient quantity: ");
@@ -61,6 +62,57 @@ namespace Part1
                         Console.WriteLine("Invalid input. Please try again");
                         Console.Write("Ingredient quantity: ");
                     }
+
+                    ///Prompt the user to choose from the below units values
+                    Console.WriteLine("Select the units of measurements (mg),(g),(kg),(ml),(l),(tablespoon),(teaspoon),(cups)");
+                    units[a] = Console.ReadLine();
+                    Boolean ingredientUnits = true;
+
+                    while (ingredientUnits)//loop that make ensure you inputted correct units 
+                    {
+                        if (units[a].Equals("mg"))
+                        {
+                            break;
+                        }
+                        else if (units[a].Equals("g"))
+                        {
+                            break;
+                        }
+                        else if (units[a].Equals("kg"))
+                        {
+                            break;
+                        }
+                        else if (units[a].Equals("ml"))
+                        {
+                            break;
+                        }
+                        else if (units[a].Equals("l"))
+                        {
+                            break;
+                        }
+                        else if (units[a].Equals("tablespoon"))
+                        {
+                            break;
+                        }
+                        else if (units[a].Equals("teaspoon"))
+                        {
+                            break;
+                        }
+                        else if (units[a].Equals("cups"))
+                        {
+                            break;
+                        }
+
+                        else
+                        {
+                            Console.WriteLine("Incorrect units of measurement. Please try again");
+                            Console.WriteLine("Select the units of measurements (mg),(g),(kg),(ml),(l),(teaspoon),(cups)");
+                            units[a] = Console.ReadLine();
+                        }
+
+
+                    }
+                    count++;
                 }
             }
         }
