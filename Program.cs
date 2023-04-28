@@ -138,7 +138,31 @@ namespace Part1
             }
 
         }
-    }
+
+        public void DisplayResults()
+        {
+            if (ingredients.Length > 0)
+            {
+                Console.WriteLine("Recipe name: " + recipeName);
+            }
+            else { Console.WriteLine("There's no recipe saved "); }
+
+
+            // Display the ingredients and quantities results
+            Console.WriteLine("Ingredients: ");
+            for (int a = 0; a < ingredients.Length; a++)
+            {
+                Console.WriteLine($"- {quantities[a]} {units[a]} of {ingredients[a]}");
+            }
+
+            // Display the steps results
+            Console.WriteLine("Steps: ");
+            for (int b = 0; b < steps.Length; b++)
+            {
+                Console.WriteLine($"Step {b + 1}  {steps[b]}");
+            }
         }
     }
+        
+    
 }
