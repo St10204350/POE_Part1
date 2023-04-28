@@ -22,5 +22,36 @@ namespace Part1
             units = new string[0];
             steps = new string[0];
         }
+        public void RecipeDetails()
+        {
+            //Prompt the user to enter the recipe name
+            Console.Write($"Enter the name of recipe: ");
+            recipeName = Console.ReadLine();
+
+            //Prompt the user to enter the number of ingredients he will need
+            Console.Write("Enter the number of ingredients: ");
+            int numIngredients = int.Parse(Console.ReadLine());
+
+            if (numIngredients > 0) //if numIngredients is less than or equal to zero the program will stop
+            {
+                // Initialize the below arrays with the correct size
+                ingredients = new string[numIngredients];
+                quantities = new double[numIngredients];
+                units = new string[numIngredients];
+
+                int count = 1;
+
+                // Prompt the user to enter the details for each ingredient
+                for (int a = 0; a < numIngredients; a++)
+                {
+                    Console.WriteLine($"Enter details for ingredient #{a + 1}:");
+
+                    Boolean w = true;
+
+                    Console.Write("Ingredient name: ");
+                    ingredients[a] = Console.ReadLine();
+                }
+            }
+        }
     }
 }
