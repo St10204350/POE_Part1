@@ -236,6 +236,25 @@ namespace Part1
 
         }
 
+        public void ClearRecipe()
+        {
+            //Prompt to choose from the below option provided
+            Console.WriteLine("Would you like to clear the data: Yes or No");
+            string clear = Console.ReadLine();
+            if (clear == "Yes")
+            {
+                // Reset all the arrays to empty
+                ingredients = new string[0];
+                quantities = new double[0];
+                units = new string[0];
+                steps = new string[0];
+            }
+            else
+            {
+                Console.WriteLine("Thank you!!!");
+            }
+
+        }
     }
     
 }
